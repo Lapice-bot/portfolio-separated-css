@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: grey;
+
+        }
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: grey;
+        }
+
+        .carousel {
+            width: 90%;
+            max-width: 1400px;
+            height: 700px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            margin: 40px auto;
+            display: flex;
+            gap: 0;
+            scroll-behavior: smooth;
+            anchor-name: --carousel;
+            scroll-snap-type: x mandatory;
+            border: 2px solid black;
+            border-radius: 15px;
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel::scroll-button(right),
+        .carousel::scroll-button(left) {
+            content: ">";
+            border: none;
+            background-color: lightblue;
+            font-size: 3rem;
+            color: white;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            padding-bottom: .1em;
+            cursor: pointer;
+            position: fixed;
+            position-anchor: --carousel;
+            position-area: right center;
+            translate: -50%;
+        }
+
+        .carousel::scroll-button(right):disabled,
+        .carousel::scroll-button(left):disabled {
+            opacity: 0.5;
+            cursor: auto;
+        }
+
+        .carousel::scroll-button(left) {
+            content: "<";
+            position-area: left center;
+            translate: 50%;
+        }
+
+        .card {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            scroll-snap-align: start;
+        }
+
+
+
+        .carousel1 {
+            width: 90%;
+            max-width: 1000px;
+            overflow-x: auto;
+            margin: 3em auto;
+            display: flex;
+            gap: 1em;
+            scroll-behavior: smooth;
+            anchor-name: --carousel1;
+            scroll-snap-type: x mandatory;
+        }
+
+        .carousel1::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel1::scroll-button(right),
+        .carousel1::scroll-button(left) {
+            content: '>';
+            border: none;
+            background-color: lightblue;
+            font-size: 3rem;
+            color: white;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            padding-bottom: .1em;
+            cursor: pointer;
+            position: fixed;
+            position-anchor: --carousel1;
+            position-area: right center;
+            translate: -50%;
+        }
+
+        .carousel1::scroll-button(right):disabled,
+        .carousel1::scroll-button(left):disabled {
+            opacity: 0.5;
+            cursor: auto;
+        }
+
+        .carousel1::scroll-button(left) {
+            content: "<";
+            position-area: left center;
+            translate: 50%;
+        }
+
+        .card1 {
+            flex: 0 0 calc(33.333% - 0.67em);
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            scroll-snap-align: start;
+        }
+
+        .card1 img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+
+        .card-content p {
+            color: gray;
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <image src="BA.png"></image>
+
+    <div class="carousel">
+
+        <img class="card" src="cc.png">
+        <img class="card" src="suki.png">
+        <img class="card" src="lmc.png">
+        <img class="card" src="aoharu.png">
+        <img class="card" src="unwelcome.png">
+        <img class="card" src="cc.png">
+        <img class="card" src="suki.png">
+        <img class="card" src="lmc.png">
+        <img class="card" src="aoharu.png">
+        <img class="card" src="unwelcome.png">
+        <img class="card" src="cc.png">
+        <img class="card" src="suki.png">
+        <img class="card" src="lmc.png">
+        <img class="card" src="aoharu.png">
+        <img class="card" src="unwelcome.png">
+    </div>
+
+    <h1>FOOD</h1>
+    <div class="carousel1">
+
+        <div class="card1">
+            <img src="cc.png">
+            <div class="card-content">
+                <h3>Chicken Meal</h3>
+                <p>⭐ 4.8 • 25 mins</p>
+                <p>100$</p>
+            </div>
+        </div>
+
+        <div class="card1">
+            <img src="suki.png">
+            <div class="card-content">
+                <h3>Sushi</h3>
+                <p>⭐ 4.9 • 30 mins</p>
+                <p>100$</p>
+            </div>
+        </div>
+
+        <div class="card1">
+            <img src="lmc.png">
+            <div class="card-content">
+                <h3>Burger</h3>
+                <p>⭐ 4.7 • 20 mins</p>
+                <p>100$</p>
+            </div>
+        </div>
+
+        <div class="card1">
+            <img src="cc.png">
+            <div class="card-content">
+                <h3>Chicken Meal</h3>
+                <p>⭐ 4.8 • 25 mins</p>
+                <p>100$</p>
+            </div>
+        </div>
+
+        <div class="card1">
+            <img src="suki.png">
+            <div class="card-content">
+                <h3>Sushi</h3>
+                <p>⭐ 4.9 • 30 mins</p>
+                <p>100$</p>
+            </div>
+        </div>
+
+        <div class="card1">
+            <img src="lmc.png">
+            <div class="card-content">
+                <h3>Burger</h3>
+                <p>⭐ 4.7 • 20 mins</p>
+                <p>100$</p>
+            </div>
+        </div>
+
+    </div>
+    
+
+</body>
+
+</html>

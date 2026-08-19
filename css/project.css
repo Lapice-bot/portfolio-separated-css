@@ -1,0 +1,348 @@
+/* =========================
+           RESET
+        ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+           BODY
+        ========================= */
+
+body {
+    min-height: 100vh;
+
+    background: #070b12;
+    color: #e9f7ff;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SCROLL REMOVE RIGHT SIDE */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+           NAVBAR
+        ========================= */
+
+.navbar {
+    height: 70px;
+
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #080d15;
+
+    border-bottom: 1px solid #173447;
+}
+
+
+.logo {
+    color: #e9f7ff;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.nav-links {
+    display: flex;
+
+    gap: 28px;
+}
+
+
+.nav-links a {
+    color: #91a8b7;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    transition: color 0.3s ease;
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #5de4ff;
+}
+
+
+/* =========================
+           MAIN
+        ========================= */
+
+main {
+    width: min(1150px, 90%);
+
+    margin: auto;
+
+    padding: 65px 0;
+}
+
+
+/* =========================
+           HEADING
+        ========================= */
+
+.page-heading {
+    margin-bottom: 40px;
+}
+
+
+.eyebrow {
+    margin-bottom: 12px;
+
+    color: #5de4ff;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+
+.page-heading h1 {
+    font-size: clamp(44px, 7vw, 76px);
+
+    letter-spacing: -3px;
+}
+
+
+/* =========================
+           PROJECT GRID
+        ========================= */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================
+           PROJECT CARD
+        ========================= */
+
+.project-card {
+    display: block;
+
+    min-height: 390px;
+
+    background: #0a111a;
+
+    border: 1px solid #1a3b4c;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        min-height 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.project-card:hover {
+    min-height: 520px;
+
+    transform: translateY(-10px);
+
+    border-color: #5de4ff;
+
+    box-shadow:
+        0 0 30px rgba(93, 228, 255, 0.14);
+}
+
+
+/* =========================
+           PROJECT IMAGE
+        ========================= */
+
+.project-image {
+    position: relative;
+
+    height: 260px;
+
+    overflow: hidden;
+
+    background: #0d1822;
+
+    border-bottom: 1px solid #173847;
+
+    transition:
+        height 0.4s ease;
+}
+
+
+.project-card:hover .project-image {
+    height: 340px;
+}
+
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0.60;
+
+    transform: scale(1);
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease,
+        filter 0.45s ease;
+}
+
+
+.project-card:hover .project-image img {
+    opacity: 0.90;
+
+    transform: scale(1.06);
+
+    filter: brightness(1.08);
+}
+
+
+/* =========================
+           IMAGE PLACEHOLDER
+        ========================= */
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #486573;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+           PROJECT INFO
+        ========================= */
+
+.project-info {
+    padding: 25px 28px 28px;
+}
+
+
+.project-info h2 {
+    margin-bottom: 12px;
+
+    color: #e9f7ff;
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.project-card:hover .project-info h2 {
+    color: #5de4ff;
+}
+
+
+.project-info p {
+    margin-bottom: 20px;
+
+    color: #9db0ba;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================
+           VIEW PROJECT
+        ========================= */
+
+.view-project {
+    color: #5de4ff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    transition:
+        letter-spacing 0.3s ease;
+}
+
+
+.project-card:hover .view-project {
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+           MOBILE
+        ========================= */
+
+@media (max-width: 750px) {
+
+    .nav-links {
+        display: none;
+    }
+
+
+    main {
+        width: 94%;
+
+        padding: 45px 0;
+    }
+
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .project-card:hover {
+        min-height: 480px;
+    }
+
+
+    .project-card:hover .project-image {
+        height: 300px;
+    }
+
+}

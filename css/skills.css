@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #070b12;
+    color: #e9f7ff;
+    min-height: 100vh
+}
+
+/* SCROLL REMOVE RIGHT SIDE */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar {
+    height: 70px;
+
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #080d15;
+
+    border-bottom: 1px solid #173447;
+}
+
+
+.logo {
+    color: #e9f7ff;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.nav-links {
+    display: flex;
+
+    gap: 28px;
+}
+
+
+.nav-links a {
+    color: #91a8b7;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    transition: color 0.3s ease;
+
+     text-decoration: none;
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #5de4ff;
+}
+
+main {
+    width: min(1100px, 90%);
+    margin: auto;
+    padding: 65px 0 80px
+}
+
+.eyebrow {
+    color: #5de4ff;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 12px
+}
+
+h1 {
+    font-size: clamp(44px, 7vw, 76px);
+    letter-spacing: -3px
+}
+
+.sub {
+    color: #718997;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-bottom: 38px
+}
+
+.panel {
+    border: 1px solid #1a3b4c;
+    background: #0a111a;
+    border-radius: 16px;
+    box-shadow: 0 0 35px rgba(30, 180, 220, .06)
+}
+
+.programming {
+    padding: 34px;
+    margin-bottom: 22px
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 28px
+}
+
+.status {
+    font-size: 10px;
+    color: #5de4ff;
+    letter-spacing: 2px
+}
+
+.skill {
+    margin: 20px 0
+}
+
+.skilltop {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 8px
+}
+
+.level {
+    color: #66808e;
+    font-size: 11px
+}
+
+.bar {
+    height: 7px;
+    background: #14232c;
+    border-radius: 10px;
+    overflow: hidden
+}
+
+.fill {
+    height: 100%;
+    background: #42d8f5
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 22px
+}
+
+.small {
+    padding: 30px;
+    min-height: 230px
+}
+
+.items {
+    list-style: none;
+    margin-top: 20px
+}
+
+.items li {
+    padding: 12px 0;
+    border-bottom: 1px solid #162b37;
+    color: #b5c7d0;
+    font-size: 14px
+}
+
+.items li:before {
+    content: "◇";
+    color: #5de4ff;
+    margin-right: 12px
+}
+
+.toolkit {
+    padding: 30px
+}
+
+.tools {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 24px
+}
+
+.tool {
+    border: 1px solid #193847;
+    padding: 18px 10px;
+    text-align: center;
+    border-radius: 10px;
+    color: #b8ccd5;
+    font-size: 12px;
+    letter-spacing: 1px;
+    background: #0b151e
+}
+
+.tool:hover {
+    border-color: #5de4ff;
+    color: #5de4ff
+}
+
+@media(max-width:750px) {
+    .nav {
+        display: none
+    }
+
+    .grid {
+        grid-template-columns: 1fr
+    }
+
+    .tools {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .programming,
+    .small,
+    .toolkit {
+        padding: 24px
+    }
+}
+
+.logo-tools {
+    align-items: stretch;
+}
+
+.logo-tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 125px;
+    transition: .2s ease;
+}
+
+.logo-tool img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-tool span {
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.logo-tool:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px rgba(66, 216, 245, .12);
+}
+
+.logo-wrap {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5de4ff
+}
+
+.logo-wrap img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    display: block
+}
+
+.logo-wrap .fallback-logo {
+    width: 42px;
+    height: 42px;
+    display: none
+}
+
+.inline-logo {
+    width: 42px;
+    height: 42px;
+    display: block;
+    flex: none;
+}

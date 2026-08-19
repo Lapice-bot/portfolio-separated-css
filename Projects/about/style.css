@@ -1,0 +1,36 @@
+body {
+    font-family: Arial;
+    background-color: #f0f0f0;
+    text-align: center;
+     background: lightcyan;
+}
+
+h1 {
+    color: red;
+}
+
+h2, h3 {
+    color: gold;
+}
+
+ul, ol {
+    display: inline-block;
+    text-align: left;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+}
+
+a {
+    color: white;
+}
+button {
+    background: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}

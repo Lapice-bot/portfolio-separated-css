@@ -1,0 +1,327 @@
+       body {
+           background-image: url(bg.jpg);
+           background-position: center;
+           background-size: cover;
+           margin-bottom: 80px;
+           font-family: "Speedee", sans-serif;
+       }
+
+       .h1 {
+           text-align: center;
+           font-size: 50px;
+
+       }
+
+       #BA {
+           display: block;
+           margin: 0 auto;
+           width: 800px;
+           height: 250px;
+       }
+
+
+       #box {
+           margin: auto;
+           justify-content: center;
+           width: 60%;
+           border-radius: 20px;
+           padding: 20px;
+           background: rgba(32, 17, 17, 0.3);
+           backdrop-filter: blur(5px);
+           color: white;
+       }
+
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+
+       .carousel {
+           width: 90%;
+           max-width: 1400px;
+           height: 650px;
+           overflow-x: auto;
+           overflow-y: hidden;
+           margin: 40px auto;
+           display: flex;
+           gap: 0;
+           scroll-behavior: smooth;
+           anchor-name: --carousel;
+           scroll-snap-type: x mandatory;
+           border-radius: 15px;
+       }
+
+       .carousel::-webkit-scrollbar {
+           display: none;
+       }
+
+       .carousel::scroll-button(right),
+       .carousel::scroll-button(left) {
+           content: ">";
+           border: none;
+           background-color: rgba(155, 150, 150, 0.466);
+           font-size: 3rem;
+           color: rgb(0, 0, 0);
+           height: 60px;
+           width: 60px;
+           border-radius: 50%;
+           padding-bottom: .1em;
+           cursor: pointer;
+           position: fixed;
+           position-anchor: --carousel;
+           position-area: right center;
+           translate: -50%;
+       }
+
+       .carousel::scroll-button(right):disabled,
+       .carousel::scroll-button(left):disabled {
+           opacity: 0.5;
+           cursor: auto;
+       }
+
+       .carousel::scroll-button(left) {
+           content: "<";
+           position-area: left center;
+           translate: 50%;
+       }
+
+       .card {
+           display: flex;
+           flex: 0 0 100%;
+           height: 100%;
+           background: white;
+           border-radius: 15px;
+           overflow: hidden;
+           scroll-snap-align: start;
+       }
+
+       .card img {
+           width: 70%;
+           height: 100%;
+           object-fit: cover;
+       }
+
+       .info {
+           width: 50%;
+           padding: 40px;
+           display: flex;
+           flex-direction: column;
+           justify-content: left;
+       }
+
+       .info h3 {
+           margin-bottom: 0px;
+           font-size: 70px;
+       }
+
+       .info p {
+           margin: 1px 0;
+           font-size: 30px;
+       }
+
+       /* ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+       .carousel1 {
+           width: 90%;
+           max-width: 1000px;
+           overflow-x: auto;
+           margin: 3em auto;
+           display: flex;
+           gap: 1em;
+           scroll-behavior: smooth;
+           anchor-name: --carousel1;
+           scroll-snap-type: x mandatory;
+       }
+
+       .carousel1::-webkit-scrollbar {
+           display: none;
+       }
+
+       .carousel1::scroll-button(right),
+       .carousel1::scroll-button(left) {
+           content: '>';
+           border: none;
+           background-color: rgba(255, 255, 255, 0.753);
+           font-size: 3rem;
+           color: rgb(0, 0, 0);
+           height: 60px;
+           width: 60px;
+           border-radius: 50%;
+           padding-bottom: .1em;
+           cursor: pointer;
+           position: fixed;
+           position-anchor: --carousel1;
+           position-area: right center;
+           translate: -50%;
+       }
+
+       .carousel1::scroll-button(right):disabled,
+       .carousel1::scroll-button(left):disabled {
+           opacity: 0.5;
+           cursor: auto;
+       }
+
+       .carousel1::scroll-button(left) {
+           content: "<";
+           position-area: left center;
+           translate: 50%;
+       }
+
+       .card1 {
+           flex: 0 0 calc(33.333% - 0.67em);
+           background-color: #FFD180;
+           border-radius: 15px;
+           overflow: hidden;
+           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+           scroll-snap-align: start;
+       }
+
+       .card1 img {
+           width: 100%;
+           height: 180px;
+           object-fit: cover;
+           display: block;
+       }
+
+       .card-content {
+           padding: 15px;
+       }
+
+       .card-content h3 {
+           margin-bottom: 8px;
+           font-size: 20px;
+       }
+
+       .card-content {
+           color: black;
+           font-size: 14px;
+       }
+
+       /* ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+       .carousel2 {
+           width: 90%;
+           max-width: 1000px;
+           overflow-x: auto;
+           margin: 3em auto;
+           display: flex;
+           gap: 1em;
+           scroll-behavior: smooth;
+           anchor-name: --carousel2;
+           scroll-snap-type: x mandatory;
+       }
+
+       .carousel2::-webkit-scrollbar {
+           display: none;
+       }
+
+       .carousel2::scroll-button(right),
+       .carousel2::scroll-button(left) {
+           content: '>';
+           border: none;
+           background-color: rgba(255, 255, 255, 0.753);
+           font-size: 3rem;
+           color: rgb(0, 0, 0);
+           height: 60px;
+           width: 60px;
+           border-radius: 50%;
+           padding-bottom: .1em;
+           cursor: pointer;
+           position: fixed;
+           position-anchor: --carousel2;
+           position-area: right center;
+           translate: -50%;
+       }
+
+       .carousel2::scroll-button(right):disabled,
+       .carousel2::scroll-button(left):disabled {
+           opacity: 0.5;
+           cursor: auto;
+       }
+
+       .carousel2::scroll-button(left) {
+           content: "<";
+           position-area: left center;
+           translate: 50%;
+       }
+
+       .card2 {
+           flex: 0 0 calc(33.333% - 0.67em);
+           background-color: #B2DFDB;
+           border-radius: 15px;
+           overflow: hidden;
+           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+           scroll-snap-align: start;
+       }
+
+       .card2 img {
+           width: 100%;
+           height: 180px;
+           object-fit: cover;
+           display: block;
+       }
+
+       /* ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+       .carousel3 {
+           width: 90%;
+           max-width: 1000px;
+           overflow-x: auto;
+           margin: 3em auto;
+           display: flex;
+           gap: 1em;
+           scroll-behavior: smooth;
+           anchor-name: --carousel3;
+           scroll-snap-type: x mandatory;
+       }
+
+       .carousel3::-webkit-scrollbar {
+           display: none;
+       }
+
+       .carousel3::scroll-button(right),
+       .carousel3::scroll-button(left) {
+           content: '>';
+           border: none;
+           background-color: rgba(255, 255, 255, 0.753);
+           font-size: 3rem;
+           color: rgb(0, 0, 0);
+           height: 60px;
+           width: 60px;
+           border-radius: 50%;
+           padding-bottom: .1em;
+           cursor: pointer;
+           position: fixed;
+           position-anchor: --carousel3;
+           position-area: right center;
+           translate: -50%;
+       }
+
+       .carousel3::scroll-button(right):disabled,
+       .carousel3::scroll-button(left):disabled {
+           opacity: 0.5;
+           cursor: auto;
+       }
+
+       .carousel3::scroll-button(left) {
+           content: "<";
+           position-area: left center;
+           translate: 50%;
+       }
+
+       .card3 {
+           flex: 0 0 calc(33.333% - 0.67em);
+           background-color: #E1BEE7;
+           border-radius: 15px;
+           overflow: hidden;
+           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+           scroll-snap-align: start;
+       }
+
+       .card3 img {
+           width: 100%;
+           height: 180px;
+           object-fit: cover;
+           display: block;
+       }

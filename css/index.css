@@ -1,0 +1,338 @@
+/* =========================
+           RESET
+        ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+           BODY
+        ========================= */
+
+body {
+    min-height: 100vh;
+
+    background: #070b12;
+    color: #e9f7ff;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+           NAVBAR
+        ========================= */
+
+.navbar {
+    height: 70px;
+
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #080d15;
+
+    border-bottom: 1px solid #173447;
+}
+
+
+.logo {
+    color: #e9f7ff;
+
+    text-decoration: none;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.nav-links {
+    display: flex;
+
+    gap: 28px;
+}
+
+
+.nav-links a {
+    color: #91a8b7;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    transition: color 0.3s ease;
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #5de4ff;
+}
+
+
+/* =========================
+           HOME
+        ========================= */
+
+main {
+    width: min(1200px, 90%);
+
+    min-height: calc(100vh - 70px);
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 45px 0;
+}
+
+
+/* =========================
+           HERO CARD
+        ========================= */
+
+.hero-card {
+    width: 100%;
+
+    min-height: 600px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.82fr;
+
+    overflow: hidden;
+
+    background: #0a111a;
+
+    border: 1px solid #1a3b4c;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 50px rgba(30, 180, 220, 0.07);
+}
+
+
+/* =========================
+           LEFT SIDE
+        ========================= */
+
+.hero-content {
+    padding: 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.eyebrow {
+    margin-bottom: 14px;
+
+    color: #5de4ff;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+
+.hero-content h1 {
+    margin-bottom: 24px;
+
+    font-size: clamp(60px, 8vw, 100px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+
+.hero-content h1 span {
+    color: #5de4ff;
+}
+
+
+.description {
+    max-width: 500px;
+
+    color: #9db0ba;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+           BUTTONS
+        ========================= */
+
+.buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 32px;
+}
+
+
+.button {
+    padding: 14px 21px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+.primary {
+    color: #061018;
+
+    background: #5de4ff;
+
+    border: 1px solid #5de4ff;
+}
+
+
+.secondary {
+    color: #5de4ff;
+
+    background: transparent;
+
+    border: 1px solid #315767;
+}
+
+
+.button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 20px rgba(93, 228, 255, 0.18);
+}
+
+
+/* =========================
+           PHOTO SIDE
+        ========================= */
+
+.hero-photo {
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(135deg,
+            #0d1822,
+            #101d28);
+
+    border-left: 1px solid #1a3b4c;
+
+    overflow: hidden;
+}
+
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0.85;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+
+.hero-photo:hover img {
+    transform: scale(1.03);
+
+    opacity: 1;
+}
+
+
+/* =========================
+           PHOTO PLACEHOLDER
+        ========================= */
+
+.photo-placeholder {
+    color: #486573;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+
+/* =========================
+           MOBILE
+        ========================= */
+
+@media (max-width: 750px) {
+
+    .nav-links {
+        display: none;
+    }
+
+
+    main {
+        width: 94%;
+
+        padding: 25px 0;
+    }
+
+
+    .hero-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero-content {
+        padding: 45px 30px;
+    }
+
+
+    .hero-photo {
+        min-height: 350px;
+
+        border-left: 0;
+
+        border-top: 1px solid #1a3b4c;
+    }
+
+
+    .hero-content h1 {
+        font-size: 60px;
+    }
+
+}

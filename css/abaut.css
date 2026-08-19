@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+           BODY
+        ========================= */
+
+body {
+    min-height: 100vh;
+
+    background: #070b12;
+    color: #e9f7ff;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SCROLL REMOVE RIGHT SIDE */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================
+           NAVBAR
+        ========================= */
+
+.navbar {
+    height: 70px;
+
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #080d15;
+
+    border-bottom: 1px solid #173447;
+}
+
+
+.logo {
+    color: #e9f7ff;
+
+    text-decoration: none;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.nav-links {
+    display: flex;
+
+    gap: 28px;
+}
+
+
+.nav-links a {
+    color: #91a8b7;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    transition: color 0.3s ease;
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #5de4ff;
+}
+
+
+/* =========================
+           MAIN
+        ========================= */
+
+main {
+    width: min(1100px, 90%);
+
+    margin: auto;
+
+    padding: 65px 0;
+}
+
+
+/* =========================
+           PAGE HEADING
+        ========================= */
+
+.page-heading {
+    margin-bottom: 38px;
+}
+
+
+.eyebrow {
+    margin-bottom: 12px;
+
+    color: #5de4ff;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+
+.page-heading h1 {
+    font-size: clamp(44px, 7vw, 76px);
+
+    letter-spacing: -3px;
+}
+
+
+/* =========================
+           ABOUT SECTIONS
+        ========================= */
+
+.about-stack {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+.about-card {
+    min-height: 180px;
+
+    padding: 32px;
+
+    background: #0a111a;
+
+    border: 1px solid #1a3b4c;
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.about-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #5de4ff;
+
+    box-shadow:
+        0 0 25px rgba(93, 228, 255, 0.09);
+}
+
+
+.about-card h2 {
+    margin-bottom: 18px;
+
+    color: #e9f7ff;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    transition: color 0.3s ease;
+}
+
+
+.about-card:hover h2 {
+    color: #5de4ff;
+}
+
+
+.about-card p {
+    max-width: 850px;
+
+    color: #9db0ba;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+           EDUCATION DETAILS
+        ========================= */
+
+.education-title {
+    margin-bottom: 8px;
+
+    color: #e9f7ff;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+}
+
+
+.education-school {
+    margin-bottom: 12px;
+
+    color: #5de4ff;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+           INTEREST TAGS
+        ========================= */
+
+.interest-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+.interest {
+    padding: 9px 14px;
+
+    color: #8fa9b6;
+
+    background: #081019;
+
+    border: 1px solid #193847;
+
+    border-radius: 6px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.interest:hover {
+    color: #5de4ff;
+
+    background: #0d1822;
+
+    border-color: #5de4ff;
+}
+
+
+/* =========================
+           MOBILE
+        ========================= */
+
+@media (max-width: 750px) {
+
+    .nav-links {
+        display: none;
+    }
+
+
+    main {
+        width: 94%;
+
+        padding: 45px 0;
+    }
+
+
+    .about-card {
+        padding: 25px;
+
+        min-height: auto;
+    }
+
+
+    .page-heading h1 {
+        font-size: 55px;
+    }
+
+}
