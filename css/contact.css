@@ -1,17 +1,8 @@
-/* =========================
-           RESET
-        ========================= */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
-/* =========================
-           BODY
-        ========================= */
 
 body {
     min-height: 100vh;
@@ -22,11 +13,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-/* =========================
-           NAVBAR
-        ========================= */
-
 .navbar {
     height: 70px;
 
@@ -34,10 +20,7 @@ body {
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
-    background: #080d15;
-
+    justify-content: space-between;    background: #080d15;
     border-bottom: 1px solid #173447;
 }
 
@@ -48,6 +31,7 @@ body {
     text-decoration: none;
 
     font-size: 20px;
+
     font-weight: 800;
 
     letter-spacing: 2px;
@@ -79,11 +63,6 @@ body {
     color: #5de4ff;
 }
 
-
-/* =========================
-           MAIN
-        ========================= */
-
 main {
     width: min(1150px, 90%);
 
@@ -91,11 +70,6 @@ main {
 
     padding: 65px 0;
 }
-
-
-/* =========================
-           PAGE HEADING
-        ========================= */
 
 .heading {
     margin-bottom: 38px;
@@ -112,31 +86,20 @@ main {
     letter-spacing: 3px;
 }
 
-
 .heading h1 {
     font-size: clamp(44px, 7vw, 76px);
 
     letter-spacing: -3px;
 }
 
-
-/* =========================
-           DASHBOARD
-        ========================= */
-
 .dashboard {
     display: grid;
 
     grid-template-columns:
-        0.75fr 1.25fr;
 
+        0.75fr 1.25fr;
     gap: 22px;
 }
-
-
-/* =========================
-           PANELS
-        ========================= */
 
 .panel {
     padding: 30px;
@@ -152,15 +115,6 @@ main {
         box-shadow 0.3s ease;
 }
 
-
-.panel:hover {
-    border-color: #5de4ff;
-
-    box-shadow:
-        0 0 25px rgba(93, 228, 255, 0.08);
-}
-
-
 .panel h2 {
     margin-bottom: 22px;
 
@@ -168,11 +122,6 @@ main {
 
     letter-spacing: 2px;
 }
-
-
-/* =========================
-           ONLINE STATUS
-        ========================= */
 
 .status {
     display: flex;
@@ -190,7 +139,6 @@ main {
     letter-spacing: 2px;
 }
 
-
 .status-dot {
     width: 8px;
     height: 8px;
@@ -203,22 +151,15 @@ main {
         0 0 12px #5de4ff;
 }
 
-
-/* =========================
-           CONTACT INFORMATION
-        ========================= */
-
 .info-item {
     padding: 18px 0;
 
     border-bottom: 1px solid #162b37;
 }
 
-
 .info-item:last-child {
     border-bottom: 0;
 }
-
 
 .info-label {
     margin-bottom: 7px;
@@ -230,17 +171,11 @@ main {
     letter-spacing: 2px;
 }
 
-
 .info-value {
     color: #d9edf5;
 
     font-size: 14px;
 }
-
-
-/* =========================
-           CONTACT LINKS
-        ========================= */
 
 .info-value a {
     color: #d9edf5;
@@ -250,15 +185,9 @@ main {
     transition: color 0.3s ease;
 }
 
-
 .info-value a:hover {
     color: #5de4ff;
 }
-
-
-/* =========================
-           FORM
-        ========================= */
 
 form {
     display: flex;
@@ -268,7 +197,6 @@ form {
     gap: 18px;
 }
 
-
 label {
     color: #66808e;
 
@@ -276,7 +204,6 @@ label {
 
     letter-spacing: 2px;
 }
-
 
 input,
 textarea {
@@ -305,12 +232,10 @@ textarea {
         box-shadow 0.25s ease;
 }
 
-
 input::placeholder,
 textarea::placeholder {
     color: #405965;
 }
-
 
 input:focus,
 textarea:focus {
@@ -320,17 +245,11 @@ textarea:focus {
         0 0 15px rgba(93, 228, 255, 0.08);
 }
 
-
 textarea {
     resize: vertical;
 
     min-height: 150px;
 }
-
-
-/* =========================
-           SEND BUTTON
-        ========================= */
 
 button {
     margin-top: 5px;
@@ -366,11 +285,6 @@ button:hover {
         0 0 22px rgba(93, 228, 255, 0.2);
 }
 
-
-/* =========================
-           FOOTER NOTE
-        ========================= */
-
 .availability {
     margin-top: 22px;
 
@@ -387,15 +301,10 @@ button:hover {
     letter-spacing: 1px;
 }
 
-
 .availability span {
     color: #5de4ff;
 }
 
-
-/* =========================
-           MOBILE
-        ========================= */
 
 @media (max-width: 750px) {
 
@@ -403,18 +312,15 @@ button:hover {
         display: none;
     }
 
-
     main {
         width: 94%;
 
         padding: 45px 0;
     }
 
-
     .dashboard {
         grid-template-columns: 1fr;
     }
-
 
     .panel {
         padding: 25px;
